@@ -1,0 +1,44 @@
+Laboratorio Modulo 1
+
+Comandos usados practica 3 Gestion de Usuario y grupos
+Lab 1.3
+=======================================
+sudo useradd -m -s /bin/bash Argenis
+sudo passwd Argenis
+sudo usermod -aG wheel Argenis
+sudo cat /etc/group
+
+sudo groupadd guest
+sudo useradd -m -s /bin/bash usuario1
+sudo usermod -aG guest usuario1
+sudo cat /etc/group
+sudo userdel -r usuario1
+sudo groupdel guest
+sudo cat /etc/group
+==========================================
+
+Comandos usados practica 4 Gestion de Permisos de archivos
+===========================================
+
+sudo mkdir Materia
+cd Materia
+sudo touch estudiante.txt
+sudo vi estudiante.txt
+cat estudiante.txt
+ls-l
+sudo chmod u+x estudiante.txt
+ll
+sudo chmod g-r estudiante.txt
+ls -l
+sudo chmod o-r estudiante.txt
+ll
+sudo chmod g+rwx estudiante.txt
+sudo chmod u-rmw estudiante.txt
+ll
+sudo mkdir Materia2
+ls
+sudo cp estudiante.txt Materia2
+ls Materia2/
+cd /
+sudo rm -r Materia
+ls
